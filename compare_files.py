@@ -1,5 +1,6 @@
 from os import listdir, rename, walk
 from os.path import isfile, join, basename, abspath, dirname
+
 import sys
 import hashlib
 
@@ -36,7 +37,7 @@ for root, subFolders, files in walk(sys.argv[2]):
 				
 				rename(f, dirname(abspath(f)) + '/' + original_files[sha1OfFile(f)])
 			else:
-				not_found = 1
+				not_found += 1
 
 print 'Total original files: ' + str(len(original_files))
 print 'Total recovered files found: ' + str(found)
