@@ -1,3 +1,3 @@
-It is a task for 2014 Erasmus+ intensive program in Portugal. This is a The scripts searches the second folder files if they exist in the first folder. It compares by checking files checksums.
+The script takes all first folder files checksums and compares it with the second folder files. Does not work with subfolders. Originally it was used to check if the file content was fully recovered after file delete and restore.
 
 ```python compare_files.py /path/to/folder1 /path/to/folder2```
